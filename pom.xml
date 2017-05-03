@@ -15,10 +15,22 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <scm>
-     <developerConnection>scm:git:https://github.com/anir/cd_java.git</developerConnection>
+  <properties>
+                <project.scm.id>scmserver</project.scm.id>
+  </properties>
+
+ <scm>
+   <developerConnection>scm:git:https://github.com/anir/cd_java.git</developerConnection>
   </scm>
-  <build>
+  
+ <repositories> 
+    <repository> 
+      <id></id> 
+      <url></url> 
+    </repository> 
+  </repositories>
+
+<build>
     <finalName>${project.artifactId}</finalName>
     <resources>
      <resource>
@@ -47,8 +59,4 @@
        </plugin>
     </plugins>
   </build>
-  <repository>
-         <id>localdeploy</id>
-         <url>file:///dev/repo/releases</url>
-  </repository>
 </project>
